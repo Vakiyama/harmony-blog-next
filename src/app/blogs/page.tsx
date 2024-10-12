@@ -3,7 +3,6 @@ import { getAllBlogs } from '@/src/services/blogActions';
 
 export default async function BlogsPage() {
   const blogs = await getAllBlogs();
-  console.log(blogs);
   return (
     <div className="pb-[200px]">
       <h1 className="max-md:text-9xl text-[200px] pt-8 ESRG-TRIAL-font">

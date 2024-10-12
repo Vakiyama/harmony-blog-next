@@ -11,6 +11,7 @@ export async function Blogs(props: { blogs: Blog[] }) {
             <BlogButton
               blog={blog}
               author={await getAuthorById(blog.authorId)}
+              key={blog.id}
             />
           </div>
         ))

@@ -7,7 +7,6 @@ export function BlogButton(props: {
   author?: Author;
   disabled?: boolean;
 }) {
-  console.log(`/blog/${props.blog.id}`, 'blog path');
   return (
     <Link
       key={props.blog.title}

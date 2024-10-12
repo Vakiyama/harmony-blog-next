@@ -3,7 +3,7 @@ import Markdown from 'react-markdown';
 import './markdown.css';
 import { BlogAuthor } from '../../../components/BlogAuthor';
 import { getAuthorById } from '@/src/services/authorActions';
-import { getBlogById } from '../../page';
+import { getBlogById } from '@/src/services/blogActions';
 // import { getBlogsFromTitle } from "../../services/addBlog";
 
 export default async function Blog(props: { params: { id: string } }) {

@@ -28,17 +28,6 @@ export function TeamMemberCard({ member }: { member: Author }) {
   const [isExpanded, setIsExpanded] = useState(false);
   const [description, setDescription] = useState('');
 
-  console.log(
-    teamImages.find((image) => {
-      console.log(
-        member.profileIconSrc.toLowerCase().split('/').at(-1)!.split('.')[0]!
-      );
-      return image
-        .toLowerCase()
-        .includes(member.profileIconSrc.toLowerCase().split('/').at(-2)!);
-    })
-  );
-
   function calculateDescription() {
     const maxLength = (window.innerWidth * window.innerHeight) / 2000;
 

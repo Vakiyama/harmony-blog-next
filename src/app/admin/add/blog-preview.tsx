@@ -3,7 +3,6 @@ import { Blog } from '@/src/db/schema/blog';
 import { Author } from '@/src/types/authors';
 import Markdown from 'react-markdown';
 import '../../blog/[id]/markdown.css';
-import { revalidatePath } from 'next/cache';
 
 export function BlogPreview(props: { blog: Blog; author: Author }) {
   const { blog } = props;
