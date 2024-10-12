@@ -28,7 +28,7 @@ export default function AddBlog() {
   }, []);
 
   useEffect(() => {
-    authors.length > 0 && setAuthor(authors[0]);
+    if (authors.length > 0) setAuthor(authors[0]);
   }, [authors]);
 
   return (

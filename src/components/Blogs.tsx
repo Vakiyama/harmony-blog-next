@@ -7,11 +7,10 @@ export async function Blogs(props: { blogs: Blog[] }) {
     <div className="grid grid-cols-3 gap-10 max-xl:grid-cols-2 max-md:grid-cols-1 w-full ">
       {props.blogs.length > 0 ? (
         props.blogs.map(async (blog) => (
-          <div className="h-full flex justify-center">
+          <div className="h-full flex justify-center" key={blog.id}>
             <BlogButton
               blog={blog}
               author={await getAuthorById(blog.authorId)}
-              key={blog.id}
             />
           </div>
         ))

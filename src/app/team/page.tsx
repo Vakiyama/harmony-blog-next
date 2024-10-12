@@ -1,7 +1,4 @@
-import { getDB } from '@/src/db';
-
 import { TeamMemberCard } from '../../components/TeamMemberCard';
-import { authorTable } from '@/src/db/schema/author';
 import { Carousel } from './carousel';
 import { getAuthorInfo } from '@/src/services/authorActions';
 
