@@ -3,10 +3,19 @@ import ValueCard from '../components/ValueCard';
 import { Blogs } from '../components/Blogs';
 import { getDB } from '../db';
 import { blogsTable } from '../db/schema/blog';
+import { eq } from 'drizzle-orm';
 
 export async function getAllBlogs() {
   const db = await getDB();
-  const allBlogs = db.select().from(blogsTable);
+  const allBlogs = await db.select().from(blogsTable);
+  return allBlogs;
+}
+
+export async function getBlogById(id: number) {
+  const db = await getDB();
+  const allBlogs = (
+    await db.select().from(blogsTable).where(eq(blogsTable.id, id))
+  )[0];
   return allBlogs;
 }
 

@@ -7,7 +7,7 @@ export const blogsTable = sqliteTable('blogs_table', {
   title: text().notNull(),
   thumbnailSrc: text().notNull(),
   content: text().notNull(),
-  authorId: text('authorId')
+  authorId: int('authorId')
     .references(() => authorTable.id, { onDelete: 'cascade' })
     .notNull(),
 });

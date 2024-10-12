@@ -2,23 +2,23 @@
 
 .markdown p {
   font-size: 20px;
-  font-family: "SF Pro", sans-serif;
+  font-family: 'SF Pro', sans-serif;
 }
 .markdown h1 {
   color: white;
-  font-size: 12px;
-  font-family: "SF Pro", sans-serif;
+  font-size: 34px;
+  font-family: 'SF Pro', sans-serif;
   font-weight: 400;
   margin-top: 35px;
 }
 .markdown h2 {
-  font-family: "ES Rebond Grotesque TRIAL", sans-serif;
+  font-family: 'ES Rebond Grotesque TRIAL', sans-serif;
   font-weight: normal;
   margin-top: 40px; /* Space above h2 */
   margin-bottom: 20px; /* Space below h2 */
 }
 .markdown h3 {
-  font-family: "ES Rebond Grotesque TRIAL", sans-serif;
+  font-family: 'ES Rebond Grotesque TRIAL', sans-serif;
   font-weight: normal;
   font-size: xx-large;
   margin-top: 40px; /* Space above h3 */
@@ -67,7 +67,7 @@
   }
   .markdown body {
     font:
-      1.3em "Vollkorn",
+      1.3em 'Vollkorn',
       Palatino,
       Times;
     color: #333;
@@ -138,7 +138,7 @@
     border-left: 1px solid #ddd;
   }
   code {
-    font-family: "Consolas", "Menlo", "Monaco", monospace, serif;
+    font-family: 'Consolas', 'Menlo', 'Monaco', monospace, serif;
     font-size: 0.9em;
     background: grey;
   }
@@ -229,7 +229,7 @@
 
 .markdown body {
   font:
-    1.3em "Vollkorn",
+    1.3em 'Vollkorn',
     Palatino,
     Times;
   color: #333;
@@ -310,7 +310,7 @@
 }
 
 .markdown code {
-  font-family: "Consolas", "Menlo", "Monaco", monospace, serif;
+  font-family: 'Consolas', 'Menlo', 'Monaco', monospace, serif;
   font-size: 0.9em;
   background: grey;
 }

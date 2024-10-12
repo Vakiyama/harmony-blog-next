@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "seed": "bun src/db/seed.ts"
   },
   "dependencies": {
     "@iconify/react": "^5.0.2",
@@ -15,10 +16,12 @@
     "drizzle-orm": "^0.34.1",
     "might-fail": "^0.6.1",
     "mysql2": "^3.11.3",
+    "net": "^1.0.2",
     "next": "14.2.15",
     "react": "^18",
     "react-dom": "^18",
-    "react-markdown": "^9.0.1"
+    "react-markdown": "^9.0.1",
+    "tls": "^0.0.1"
   },
   "devDependencies": {
     "@types/node": "^20",
