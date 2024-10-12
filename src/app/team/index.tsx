@@ -1,7 +1,16 @@
-import teamData from '../lib/teamdata';
+import { getDB } from '@/src/db';
+
+async function getAuthorInfo() {
+  'use server';
+  const db = await getDB();
+  const authors = db.select().from(authorTable);
+  return authors;
+}
+
 import { useEffect, useRef } from 'react';
 import { useState } from 'react';
-import { TeamMemberCard } from '../components/TeamMemberCard';
+import { TeamMemberCard } from '../../components/TeamMemberCard';
+import { authorTable } from '@/src/db/schema/author';
 
 const images = [
   './assets/images/teamImage.png',
@@ -9,7 +18,7 @@ const images = [
   './assets/images/teamImage2.jpg',
 ];
 
-export default function Team() {
+export default async function Team() {
   const [carouselIndex, setCarouselIndex] = useState(0);
   const [imageWidth, setImageWidth] = useState(0);
   const [animations, setAnimations] = useState(false);
@@ -50,6 +59,8 @@ export default function Team() {
     return width;
   }
 
+  const authors = await getAuthorInfo();
+
   return (
     <div className="flex flex-col items-center px-[20px] visible">
       <div className="flex flex-col items-center">
@@ -89,7 +100,7 @@ export default function Team() {
         </p>*/}
 
         <div className="grid grid-cols-2 gap-[65px] justify-center max-md:grid-cols-1 mt-[120px]">
-          {teamData.map((member, index) => (
+          {authors.map((member, index) => (
             <TeamMemberCard key={index} member={member} />
           ))}
         </div>

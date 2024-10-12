@@ -1,9 +1,18 @@
-import Image from 'next/image';
 import Link from 'next/link';
-import ValueCard from './components/ValueCard';
-import { Blogs } from './blogs';
+import ValueCard from '../components/ValueCard';
+import { Blogs } from '../components/Blogs';
+import { getDB } from '../db';
+import { blogsTable } from '../db/schema/blog';
 
-export default function Home() {
+export async function getAllBlogs() {
+  const db = await getDB();
+  const allBlogs = db.select().from(blogsTable);
+  return allBlogs;
+}
+
+export default async function Home() {
+  const blogs = await getAllBlogs();
+
   return (
     <>
       <div className="w-full">

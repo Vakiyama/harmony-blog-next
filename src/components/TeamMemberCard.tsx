@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Author } from '../types/authors';
+import { Author } from '../app/types/authorsors';
 import { Icon } from '@iconify/react/dist/iconify.js';
 
 export function TeamMemberCard({ member }: { member: Author }) {

@@ -1,7 +1,7 @@
 // import type { Blog } from "../../lib";
 import Markdown from 'react-markdown';
 import './markdown.css';
-import { BlogAuthor } from '../../components/BlogAuthor';
+import { BlogAuthor } from '../../../components/BlogAuthor';
 // import { getBlogsFromTitle } from "../../services/addBlog";
 
 export default function Blog() {

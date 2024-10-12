@@ -1,4 +1,4 @@
-import { Blog } from "../lib";
+import { Blog } from "../app/liblib";
 
 export function BlogAuthor(props: { blog: Blog }) {
   return (

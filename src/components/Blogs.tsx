@@ -1,4 +1,4 @@
-import { Blog } from '../lib';
+import { Blog } from '../app/lib';
 import { BlogButton } from './BlogButton';
 
 export function Blogs(props: { blogs: Blog[] }) {

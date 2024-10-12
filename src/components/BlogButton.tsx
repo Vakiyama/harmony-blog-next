@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Blog } from '../lib';
+import { Blog } from '../app/liblib';
 
 export function BlogButton(props: { blog: Blog; disabled?: boolean }) {
   return (
