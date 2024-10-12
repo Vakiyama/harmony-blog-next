@@ -1,4 +1,4 @@
-import { getAllBlogs } from '../../page';
+import { getAllBlogs } from '@/src/services/blogActions';
 import { DeleteBlogList } from './blog-list';
 
 export default async function DeleteBlog() {

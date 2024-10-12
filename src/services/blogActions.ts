@@ -22,3 +22,17 @@ export async function deletedBlogById(id: number, password: string) {
   revalidatePath('/admin/delete');
   revalidatePath('/blogs');
 }
+
+export async function getAllBlogs() {
+  const db = await getDB();
+  const allBlogs = await db.select().from(blogsTable);
+  return allBlogs;
+}
+
+export async function getBlogById(id: number) {
+  const db = await getDB();
+  const allBlogs = (
+    await db.select().from(blogsTable).where(eq(blogsTable.id, id))
+  )[0];
+  return allBlogs;
+}

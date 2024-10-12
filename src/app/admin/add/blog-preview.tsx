@@ -17,10 +17,12 @@ export function BlogPreview(props: { blog: Blog; author: Author }) {
         <div className="my-3">
           <BlogAuthor blog={blog} author={props.author} />
         </div>
-        {blog.thumbnailSrc &&<img
-          src={blog.thumbnailSrc}
-          className="w-full h-auto aspect-[5/3] rounded-[25px] border border-white object-cover mb-10"
-        />}
+        {blog.thumbnailSrc && (
+          <img
+            src={blog.thumbnailSrc}
+            className="w-full h-auto aspect-[5/3] rounded-[25px] border border-white object-cover mb-10"
+          />
+        )}
         <div className="markdown">
           <Markdown>{blog.content}</Markdown>
         </div>

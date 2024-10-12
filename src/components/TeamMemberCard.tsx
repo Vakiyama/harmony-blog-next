@@ -96,7 +96,7 @@ export function TeamMemberCard({ member }: { member: Author }) {
             <p className="text-[#949494]">
               {isExpanded ? 'Show Less' : 'Show More'}
             </p>
-            <div className="pl-1 flex relative bottom-[200px]">
+            <div className="pl-1 flex relative bottom-[0px]">
               <Icon className="text-[#949494]" icon="ph-caret-circle-down" />
             </div>
           </button>

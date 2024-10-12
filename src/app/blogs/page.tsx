@@ -1,5 +1,5 @@
 import { Blogs } from '../../components/Blogs';
-import { getAllBlogs } from '../page';
+import { getAllBlogs } from '@/src/services/blogActions';
 
 export default async function BlogsPage() {
   const blogs = await getAllBlogs();
