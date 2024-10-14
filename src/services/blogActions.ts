@@ -8,10 +8,11 @@ import { handleLogin } from './authActions';
 export async function addBlogToDb(blog: Blog, password: string) {
   if (!(await handleLogin(password))) return;
   const db = await getDB();
-  await db.insert(blogsTable).values(blog);
+  const { id } = (await db.insert(blogsTable).values(blog).returning())[0];
   revalidatePath('/');
   revalidatePath('/admin/delete');
   revalidatePath('/blogs');
+  return id;
 }
 
 export async function deletedBlogById(id: number, password: string) {
@@ -24,9 +25,14 @@ export async function deletedBlogById(id: number, password: string) {
 }
 
 export async function getAllBlogs() {
-  const db = await getDB();
-  const allBlogs = await db.select().from(blogsTable);
-  return allBlogs;
+  try {
+    const db = await getDB();
+    const allBlogs = await db.select().from(blogsTable);
+    return allBlogs;
+  } catch (e) {
+    console.error(e);
+    return [];
+  }
 }
 
 export async function getBlogById(id: number) {

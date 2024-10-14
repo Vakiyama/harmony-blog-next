@@ -7,6 +7,7 @@ import { addBlogToDb } from '@/src/services/blogActions';
 import { getAuthorInfo } from '@/src/services/authorActions';
 import { BlogPreview } from './blog-preview';
 import { handleLogin } from '@/src/services/authActions';
+import { useRouter } from 'next/navigation';
 
 export default function AddBlog() {
   const [markdown, setMarkdown] = useState('# Example title /n Contents');
@@ -18,6 +19,8 @@ export default function AddBlog() {
   const [passwordFormInput, setPasswordFormInput] = useState('');
 
   const [invalidPassword, setInvalidPassword] = useState<null | string>(null);
+
+  const router = useRouter();
 
   function refetchBlogs() {
     getAuthorInfo().then(setAuthors);
@@ -42,7 +45,7 @@ export default function AddBlog() {
                 onSubmit={async (e) => {
                   e.preventDefault();
                   if (!author) return;
-                  await addBlogToDb(
+                  const id = await addBlogToDb(
                     {
                       title,
                       thumbnailSrc,
@@ -51,6 +54,7 @@ export default function AddBlog() {
                     },
                     password
                   );
+                  router.push(`/blog/${id}`);
                 }}
               >
                 <label className="text-white text-2xl">Title</label>
