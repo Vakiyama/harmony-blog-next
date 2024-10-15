@@ -23,7 +23,7 @@ export function BlogButton(props: {
           {props.blog.title}
         </div>
         {props.author && (
-          <div className="text-[#9c9c9c] text-[1.3rem] max-md:text-[1rem] font-normal sfpro-font">
+          <div className="dark:text-[#9c9c9c] text-[#2A2A2A] text-[1.3rem] max-md:text-[1rem] font-normal sfpro-font">
             {props.author.name}
           </div>
         )}
