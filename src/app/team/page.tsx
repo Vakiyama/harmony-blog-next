@@ -9,12 +9,12 @@ export default async function Team() {
   return (
     <div className="flex flex-col items-center px-[20px] visible">
       <div className="flex flex-col items-center">
-        <h1 className="text-white text-[123.20px] max-md:text-6xl ESRG-TRIAL-font font-normal mb-[50px] text-center">
+        <h1 className="dark:text-white text-black text-[123.20px] max-md:text-6xl ESRG-TRIAL-font font-normal mb-[50px] text-center">
           Our Team!
         </h1>
 
         <Carousel />
-        {/*<p className="text-white text-[26px] sfpro-font font-normal mt-[35px] mb-[134px] text-center">
+        {/*<p className="dark:text-white text-black text-[26px] sfpro-font font-normal mt-[35px] mb-[134px] text-center">
           This team wins!
         </p>*/}
 
