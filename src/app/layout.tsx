@@ -56,7 +56,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${esrgTrial.variable} ${sfPro.variable} antialiased font-paragraph`}
+        className={`${esrgTrial.variable} ${sfPro.variable} antialiased font-paragraph pb-[100px]`}
       >
         <div className="flex flex-row justify-center w-full ">
           <nav className="flex justify-between text-lg lg:px-8 px-5 border-b border-b-[#919191] w-full py-7 mb-4">
