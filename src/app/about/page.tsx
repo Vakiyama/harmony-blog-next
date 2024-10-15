@@ -8,7 +8,7 @@ export default function AboutComponent() {
         src={Placeholder.src}
         alt="Alt"
       />
-      <h1 className="dark:text-white text-black leading-[180px] text-[150px] max-xl:text-6xl ESRG-TRIAL-font font-normal mt-[15px] mb-[30px] max-xl:mb-[10px] break-words">
+      <h1 className="dark:text-white text-black leading-[180px] text-[150px] max-xl:text-6xl font-title font-normal mt-[15px] mb-[30px] max-xl:mb-[10px] break-words">
         What is Harmony?
       </h1>
       <p className="dark:text-white text-black text-[40px] max-xl:text-[20px] sfpro-font font-normal mt-[35px] mb-[134px]">

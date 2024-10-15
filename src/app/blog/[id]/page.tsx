@@ -13,7 +13,7 @@ export default async function Blog(props: { params: { id: string } }) {
   return (
     <div className="w-full flex justify-center">
       <div className="pb-[200px] w-[50vw] max-md:w-full">
-        <h1 className="ESRG-TRIAL-font max-md:text-4xl text-6xl font-bold opacity-95">
+        <h1 className="font-title max-md:text-4xl text-6xl font-bold opacity-95">
           {blog.title}
         </h1>
         <div className="my-3">
