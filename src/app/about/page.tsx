@@ -1,11 +1,11 @@
-import Placeholder from '../../assets/images/placeholder.jpg';
+import TeamImage from '../../assets/images/teamImage.png';
 
 export default function AboutComponent() {
   return (
     <div className="flex flex-col pt-20">
       <img
-        className="w-full h-[425px] rounded-[25px] border border-white object-cover"
-        src={Placeholder.src}
+        className="w-full rounded-[25px] border border-white object-cover aspect-[1.45]"
+        src={TeamImage.src}
         alt="Alt"
       />
       <h1 className="dark:text-white text-black leading-[180px] text-[150px] max-xl:text-6xl font-title font-normal mt-[15px] mb-[30px] max-xl:mb-[10px] break-words">
