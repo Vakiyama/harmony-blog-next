@@ -25,3 +25,31 @@ body {
     text-wrap: balance;
   }
 }
+
+@font-face {
+    font-family: 'SF Pro';
+    src: url('/src/fonts/SF-Pro.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SF Pro Rounded';
+    src: url('/src/fonts/SF-Pro-Rounded-Regular.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ES Rebond Grotesque TRIAL';
+    src: url('/src/fonts/ESRebondGrotesqueTRIAL-Regular.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+.sfpro-font {
+    font-family: 'SF Pro', sans-serif;
+}
+
+.ESRG-TRIAL-font {
+    font-family: 'ES Rebond Grotesque TRIAL', sans-serif;
+}
