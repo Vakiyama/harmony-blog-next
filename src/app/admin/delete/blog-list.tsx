@@ -19,7 +19,7 @@ export function DeleteBlogList(props: { allBlogs: Blog[] }) {
         allBlogs.map((blog) => (
           <div key={blog.title}>
             <h1>Delete blog {blog.title}?</h1>
-            <p className="text-white opacity-55">
+            <p className="dark:text-white text-black opacity-55">
               <i>This action cannot be undone</i>
             </p>
             <DeleteBlogButton id={blog.id!} password={password} />

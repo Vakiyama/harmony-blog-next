@@ -1,7 +1,7 @@
-import Link from 'next/link';
-import ValueCard from '../components/ValueCard';
-import { Blogs } from '../components/Blogs';
-import { getAllBlogs } from '../services/blogActions';
+import Link from "next/link";
+import ValueCard from "../components/ValueCard";
+import { Blogs } from "../components/Blogs";
+import { getAllBlogs } from "../services/blogActions";
 
 export default async function Home() {
   const blogs = await getAllBlogs();
@@ -10,27 +10,27 @@ export default async function Home() {
     <>
       <div className="w-full">
         <div className="py-20">
-          <div className="text-white text-[6vw] max-md:text-[12vw] font-normal ESRG-TRIAL-font max-sm:pb-4">
+          <div className="dark:dark:text-white text-black text-[6vw] max-md:text-[12vw] font-normal ESRG-TRIAL-font max-sm:pb-4">
             Harmony
           </div>
-          <div className="text-white text-[2vw] max-md:text-[6vw] font-normal pb-10">
+          <div className="dark:text-white text-black text-[2vw] max-md:text-[6vw] font-normal pb-10">
             Your partner in care!
           </div>
-          <div className="text-white text-[1.5vw] max-md:text-[3vw] font-normal pb-10 max-sm:max-w-[65vw]">
+          <div className="dark:text-white text-black text-[1.5vw] max-md:text-[3vw] font-normal pb-10 max-sm:max-w-[65vw]">
             Harmony empowers caregivers with AI-driven tools that ease daily
             burdens, foster connection,
             <br /> and support underrepresented communities. Simple,
             compassionate care at your fingertips.
           </div>
           <Link
-            className="text-white text-[1.7vw] max-md:text-[3vw] font-normal border border-white rounded-full p-4 max-sm:p-2"
+            className="dark:text-white text-black text-[1.7vw] max-md:text-[3vw] font-normal border dark:border-white border-black rounded-full p-4 max-sm:p-2"
             href="/about"
           >
             Learn More!
           </Link>
         </div>
         <div className="pt-36 max-sm:pt-12">
-          <h1 className="text-white font-normal ESRG-TRIAL-font text-[3.5vw] max-md:text-[6vw] mb-12 max-md:mb-8">
+          <h1 className="dark:text-white text-black font-normal ESRG-TRIAL-font text-[3.5vw] max-md:text-[6vw] mb-12 max-md:mb-8">
             What we Value
           </h1>
           <div className="flex max-xl:gap-8 gap-20 max-xl:flex-col ">
@@ -51,7 +51,7 @@ export default async function Home() {
             />
           </div>
         </div>
-        <h1 className="text-white font-normal text-[3.5vw] max-md:text-[6vw] mb-12 pt-20 ESRG-TRIAL-font">
+        <h1 className="dark:text-white text-black font-normal text-[3.5vw] max-md:text-[6vw] mb-12 pt-20 ESRG-TRIAL-font">
           Explore our Blog!
         </h1>
         <Blogs blogs={blogs} />

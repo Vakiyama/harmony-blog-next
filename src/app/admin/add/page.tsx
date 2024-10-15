@@ -1,22 +1,22 @@
-'use client';
+"use client";
 
-import { useEffect, useState } from 'react';
-import type { Author } from '@/src/db/schema/author';
-import { BlogButton } from '../../../components/BlogButton';
-import { addBlogToDb } from '@/src/services/blogActions';
-import { getAuthorInfo } from '@/src/services/authorActions';
-import { BlogPreview } from './blog-preview';
-import { handleLogin } from '@/src/services/authActions';
-import { useRouter } from 'next/navigation';
+import { useEffect, useState } from "react";
+import type { Author } from "@/src/db/schema/author";
+import { BlogButton } from "../../../components/BlogButton";
+import { addBlogToDb } from "@/src/services/blogActions";
+import { getAuthorInfo } from "@/src/services/authorActions";
+import { BlogPreview } from "./blog-preview";
+import { handleLogin } from "@/src/services/authActions";
+import { useRouter } from "next/navigation";
 
 export default function AddBlog() {
-  const [markdown, setMarkdown] = useState('# Example title /n Contents');
-  const [thumbnailSrc, setThumbnailSrc] = useState('');
-  const [title, setTitle] = useState('');
+  const [markdown, setMarkdown] = useState("# Example title /n Contents");
+  const [thumbnailSrc, setThumbnailSrc] = useState("");
+  const [title, setTitle] = useState("");
   const [author, setAuthor] = useState<Author>();
   const [authors, setAuthors] = useState<Author[]>([]);
   const [password, setPassword] = useState<string | null>(null);
-  const [passwordFormInput, setPasswordFormInput] = useState('');
+  const [passwordFormInput, setPasswordFormInput] = useState("");
 
   const [invalidPassword, setInvalidPassword] = useState<null | string>(null);
 
@@ -57,7 +57,9 @@ export default function AddBlog() {
                   router.push(`/blog/${id}`);
                 }}
               >
-                <label className="text-white text-2xl">Title</label>
+                <label className="dark:dark:text-white text-black  text-2xl">
+                  Title
+                </label>
                 <input
                   name="title"
                   type="text"
@@ -67,14 +69,16 @@ export default function AddBlog() {
                   placeholder="Title for blog..."
                 />
 
-                <label className="text-white text-2xl">Author</label>
+                <label className="dark:dark:text-white text-black  text-2xl">
+                  Author
+                </label>
                 <select
                   onChange={(e) =>
                     setAuthor(
                       authors.find((author) => author.name === e.target.value)!
                     )
                   }
-                  value={author?.name ? author.name : ''}
+                  value={author?.name ? author.name : ""}
                   className="p-1 rounded-md"
                 >
                   {authors.map((author) => (
@@ -82,7 +86,9 @@ export default function AddBlog() {
                   ))}
                 </select>
 
-                <label className="text-white text-2xl">Thumbnail SRC</label>
+                <label className="dark:dark:text-white text-black  text-2xl">
+                  Thumbnail SRC
+                </label>
                 <input
                   onChange={(e) => setThumbnailSrc(e.target.value)}
                   name="description"
@@ -91,9 +97,11 @@ export default function AddBlog() {
                   placeholder="Image link here..."
                 />
 
-                {thumbnailSrc !== '' && <img src={thumbnailSrc} />}
+                {thumbnailSrc !== "" && <img src={thumbnailSrc} />}
 
-                <label className="text-white text-2xl">Markdown</label>
+                <label className="dark:dark:text-white text-black text-2xl">
+                  Markdown
+                </label>
                 <textarea
                   value={markdown}
                   onChange={(e) => setMarkdown(e.target.value)}
@@ -157,7 +165,7 @@ export default function AddBlog() {
                 e.preventDefault();
                 const result = await handleLogin(passwordFormInput);
                 if (result) setPassword(passwordFormInput);
-                else setInvalidPassword('Invalid password.');
+                else setInvalidPassword("Invalid password.");
               }}
               className="w-fit flex flex-col gap-4"
             >
