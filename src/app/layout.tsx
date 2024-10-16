@@ -4,7 +4,7 @@ import './globals.css';
 import Link from 'next/link';
 import LightLogo from '../assets/images/logos/light-logo.svg';
 import DarkLogo from '../assets/images/logos/dark-logo.svg';
-import { Analytics } from "@vercel/analytics/react"
+import { Analytics } from '@vercel/analytics/react';
 
 /*
 const geistSans = localFont({
@@ -60,6 +60,7 @@ export default function RootLayout({
         className={`${esrgTrial.variable} ${sfPro.variable} antialiased font-paragraph pb-[100px]`}
       >
         <div className="flex flex-row justify-center w-full ">
+        <Analytics />
           <nav className="flex justify-between text-lg lg:px-8 px-5 border-b border-b-[#919191] w-full py-7 mb-4">
             <Link href="/">
               <picture>
