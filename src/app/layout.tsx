@@ -4,6 +4,7 @@ import './globals.css';
 import Link from 'next/link';
 import LightLogo from '../assets/images/logos/light-logo.svg';
 import DarkLogo from '../assets/images/logos/dark-logo.svg';
+import { Analytics } from "@vercel/analytics/react"
 
 /*
 const geistSans = localFont({
