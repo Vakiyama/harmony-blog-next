@@ -1,17 +1,17 @@
-"use client";
+'use client';
 
-import { useEffect, useState } from "react";
-import { Author } from "../db/schema/author";
-import { Icon } from "@iconify/react/dist/iconify.js";
+import { useEffect, useState } from 'react';
+import { Author } from '../db/schema/author';
+import { Icon } from '@iconify/react/dist/iconify.js';
 
-import TinaThumbnail from "../assets/images/tina.jpg";
-import MaxThumbnail from "../assets/images/max.jpg";
-import ChelseaThumbnail from "../assets/images/chelsea.png";
-import AnnabelleThumbnail from "../assets/images/annabelle.jpg";
-import KeonaThumbnail from "../assets/images/keona.jpg";
-import AngusThumbnail from "../assets/images/placeholder.jpg";
-import VitorThumbnail from "../assets/images/vitor.jpg";
-import EmmyThumbnail from "../assets/images/emmy.png";
+import TinaThumbnail from '../assets/images/tina.jpg';
+import MaxThumbnail from '../assets/images/max.jpg';
+import ChelseaThumbnail from '../assets/images/chelsea.png';
+import AnnabelleThumbnail from '../assets/images/annabelle.jpg';
+import KeonaThumbnail from '../assets/images/keona.jpg';
+import AngusThumbnail from '../assets/images/angus.jpg';
+import VitorThumbnail from '../assets/images/vitor.jpg';
+import EmmyThumbnail from '../assets/images/emmy.png';
 
 const teamImages = [
   TinaThumbnail,
@@ -26,7 +26,7 @@ const teamImages = [
 
 export function TeamMemberCard({ member }: { member: Author }) {
   const [isExpanded, setIsExpanded] = useState(false);
-  const [description, setDescription] = useState("");
+  const [description, setDescription] = useState('');
 
   function calculateDescription() {
     const maxLength = (window.innerWidth * window.innerHeight) / 2000;
@@ -34,17 +34,17 @@ export function TeamMemberCard({ member }: { member: Author }) {
     const newDescription = isExpanded
       ? member.description
       : member.description.length > maxLength
-      ? member.description.slice(0, maxLength) + "..."
-      : member.description;
+        ? member.description.slice(0, maxLength) + '...'
+        : member.description;
 
     setDescription(newDescription);
   }
 
   useEffect(() => {
     calculateDescription();
-    window.addEventListener("resize", calculateDescription);
+    window.addEventListener('resize', calculateDescription);
     return () => {
-      window.removeEventListener("resize", calculateDescription);
+      window.removeEventListener('resize', calculateDescription);
     };
   }, []);
 
@@ -58,9 +58,9 @@ export function TeamMemberCard({ member }: { member: Author }) {
             .includes(
               member.profileIconSrc
                 .toLowerCase()
-                .split("/")
+                .split('/')
                 .at(-1)!
-                .split(".")[0]!
+                .split('.')[0]!
             )
         )}
         alt={member.name}
@@ -83,7 +83,7 @@ export function TeamMemberCard({ member }: { member: Author }) {
             className="mt-2 flex items-center hover:opacity-75 cursor-pointer"
           >
             <p className="text-[#949494]">
-              {isExpanded ? "Show Less" : "Show More"}
+              {isExpanded ? 'Show Less' : 'Show More'}
             </p>
             <div className="pl-1 flex relative bottom-[0px]">
               <Icon className="text-[#949494]" icon="ph-caret-circle-down" />

@@ -6,7 +6,7 @@ import MaxThumbnail from '../assets/images/max.jpg';
 import ChelseaThumbnail from '../assets/images/chelsea.png';
 import AnnabelleThumbnail from '../assets/images/annabelle.jpg';
 import KeonaThumbnail from '../assets/images/keona.jpg';
-import AngusThumbnail from '../assets/images/placeholder.jpg';
+import AngusThumbnail from '../assets/images/angus.jpg';
 import VitorThumbnail from '../assets/images/vitor.jpg';
 import EmmyThumbnail from '../assets/images/emmy.png';
 
