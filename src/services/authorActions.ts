@@ -1,11 +1,11 @@
-'use server';
-import { eq } from 'drizzle-orm';
-import { getDB } from '../db';
-import { authorTable } from '../db/schema/author';
+"use server";
+import { eq } from "drizzle-orm";
+import { getDB } from "../db";
+import { authorTable } from "../db/schema/author";
 
 export async function getAuthorInfo() {
   const db = await getDB();
-  const authors = db.select().from(authorTable);
+  const authors = await db.select().from(authorTable);
   return authors;
 }
 
